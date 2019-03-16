@@ -1,7 +1,7 @@
 // (c) 2017 Joost Yervante Damad <joost@damad.be>
 
 /// equipment
-#[derive(Serialize, Deserialize, Debug, Default)]
+#[derive(Serialize, Deserialize, Debug, Default, Clone)]
 pub struct Equipment {
     /// name of the style
     #[serde(skip)]

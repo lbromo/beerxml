@@ -1,7 +1,7 @@
 // (c) 2017 Joost Yervante Damad <joost@damad.be>
 
 /// a beer style
-#[derive(Serialize, Deserialize, Debug, Default)]
+#[derive(Serialize, Deserialize, Debug, Default, Clone)]
 pub struct Style {
     /// name of the style
     #[serde(skip)]
@@ -62,7 +62,7 @@ pub struct Style {
 }
 
 /// defines the type of beverage associated with this style
-#[derive(ToString, EnumString, Serialize, Deserialize, Debug)]
+#[derive(ToString, EnumString, Serialize, Deserialize, Debug, Clone)]
 pub enum StyleType {
     /// Lager beer
     Lager,

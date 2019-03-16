@@ -1,7 +1,7 @@
 // (c) 2017 Joost Yervante Damad <joost@damad.be>
 
 /// a yeast
-#[derive(Serialize, Deserialize, Debug, Default)]
+#[derive(Serialize, Deserialize, Debug, Default, Clone)]
 pub struct Yeast {
     /// name of the hop
     #[serde(skip)]
@@ -67,7 +67,7 @@ pub struct Yeast {
 }
 
 /// the type of a yeast
-#[derive(ToString, EnumString, Serialize, Deserialize, Debug)]
+#[derive(ToString, EnumString, Serialize, Deserialize, Debug, Clone)]
 pub enum YeastType {
     /// ale (top-fermenting) yeast
     Ale,
@@ -88,7 +88,7 @@ impl Default for YeastType {
 }
 
 /// the form of the yeast
-#[derive(ToString, EnumString, Serialize, Deserialize, Debug)]
+#[derive(ToString, EnumString, Serialize, Deserialize, Debug, Clone)]
 pub enum YeastForm {
     /// liquid yeast
     Liquid,
@@ -107,7 +107,7 @@ impl Default for YeastForm {
 }
 
 /// flocculation of a yeast
-#[derive(ToString, EnumString, Serialize, Deserialize, Debug)]
+#[derive(ToString, EnumString, Serialize, Deserialize, Debug, Clone)]
 pub enum YeastFlocculation {
     /// low flocculation
     Low,

@@ -4,7 +4,7 @@ use std::collections::HashMap;
 use super::*;
 
 /// a beer recipe
-#[derive(Serialize, Deserialize, Debug, Default)]
+#[derive(Serialize, Deserialize, Debug, Default, Clone)]
 pub struct Recipe {
     /// name of the recipe
     #[serde(skip)]
@@ -58,7 +58,7 @@ pub struct Recipe {
 }
 
 /// recipe type
-#[derive(ToString, EnumString, Serialize, Deserialize, Debug)]
+#[derive(ToString, EnumString, Serialize, Deserialize, Debug, Clone)]
 pub enum RecipeType {
     /// extract recipe
     Extract,

@@ -1,7 +1,7 @@
 // (c) 2017 Joost Yervante Damad
 
 /// water information
-#[derive(Serialize, Deserialize, Debug, Default)]
+#[derive(Serialize, Deserialize, Debug, Default, Clone)]
 pub struct Water {
     /// name of the misc item
     #[serde(skip)]

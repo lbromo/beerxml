@@ -1,7 +1,7 @@
 // (c) 2017 Joost Yervante Damad
 
 /// misc beer ingredient
-#[derive(Serialize, Deserialize, Debug, Default)]
+#[derive(Serialize, Deserialize, Debug, Default, Clone)]
 pub struct Misc {
     /// name of the misc item
     #[serde(skip)]
@@ -33,7 +33,7 @@ pub struct Misc {
 }
 
 /// misc type
-#[derive(ToString, EnumString, Serialize, Deserialize, Debug)]
+#[derive(ToString, EnumString, Serialize, Deserialize, Debug, Clone)]
 pub enum MiscType {
     /// a spice
     Spice,
@@ -58,7 +58,7 @@ impl Default for MiscType {
 }
 
 /// usage for a misc item
-#[derive(ToString, EnumString, Serialize, Deserialize, Debug)]
+#[derive(ToString, EnumString, Serialize, Deserialize, Debug, Clone)]
 pub enum MiscUse {
     /// use in boil
     Boil,

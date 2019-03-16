@@ -14,7 +14,7 @@ pub use self::water::*;
 pub use self::yeast::*;
 
 /// a record set
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub enum RecordSet {
     /// the default empty record set
     Empty,

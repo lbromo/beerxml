@@ -3,7 +3,7 @@
 use super::MashStep;
 
 /// a mash profile
-#[derive(Serialize, Deserialize, Debug, Default)]
+#[derive(Serialize, Deserialize, Debug, Default, Clone)]
 pub struct Mash {
     /// name of the style
     #[serde(skip)]
@@ -41,7 +41,7 @@ pub struct Mash {
 }
 
 /// type of the mash step
-#[derive(ToString, EnumString, Serialize, Deserialize, Debug)]
+#[derive(ToString, EnumString, Serialize, Deserialize, Debug, Clone)]
 pub enum MashStepType {
     /// adding hot water
     Infusion,

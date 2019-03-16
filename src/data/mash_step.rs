@@ -1,7 +1,7 @@
 // (c) 2017 Joost Yervante Damad <joost@damad.be>
 
 /// a mash step is an internal record used within a mash profile to denote a separate step in a multi-step mash.  A mash step is not intended for use outside of a mash profile
-#[derive(Serialize, Deserialize, Debug, Default)]
+#[derive(Serialize, Deserialize, Debug, Default, Clone)]
 pub struct MashStep {
     /// name of the mash step
     pub name: String,
@@ -26,7 +26,7 @@ pub struct MashStep {
 }
 
 /// type of the mash step
-#[derive(ToString, EnumString, Serialize, Deserialize, Debug)]
+#[derive(ToString, EnumString, Serialize, Deserialize, Debug, Clone)]
 pub enum MashStepType {
     /// adding hot water
     Infusion,

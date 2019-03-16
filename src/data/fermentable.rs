@@ -1,7 +1,7 @@
 // (c) 2017 Joost Yervante Damad
 
 /// a fermentable type
-#[derive(ToString,EnumString,Debug,Serialize,Deserialize)]
+#[derive(ToString, EnumString, Debug, Serialize, Deserialize,Clone)]
 pub enum FermentableType {
     /// grain
     Grain,
@@ -24,7 +24,7 @@ impl Default for FermentableType {
 }
 
 /// a fermentable
-#[derive(Serialize, Deserialize, Debug, Default)]
+#[derive(Serialize, Deserialize, Debug, Default, Clone)]
 pub struct Fermentable {
     /// name of the fermentable
     #[serde(skip)]

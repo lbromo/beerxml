@@ -1,7 +1,7 @@
 // (c) 2017 Joost Yervante Damad <joost@damad.be>
 
 /// a hop
-#[derive(Serialize, Deserialize, Debug, Default)]
+#[derive(Serialize, Deserialize, Debug, Default, Clone)]
 pub struct Hop {
     /// name of the hop
     #[serde(skip)]
@@ -53,7 +53,7 @@ pub struct Hop {
 }
 
 /// the usage of the hop
-#[derive(ToString, EnumString, Serialize, Deserialize, Debug)]
+#[derive(ToString, EnumString, Serialize, Deserialize, Debug, Clone)]
 pub enum HopUse {
     /// aroma hop usage
     Aroma,
@@ -78,7 +78,7 @@ impl Default for HopUse {
 }
 
 /// the type of a hop
-#[derive(ToString, EnumString, Serialize, Deserialize, Debug)]
+#[derive(ToString, EnumString, Serialize, Deserialize, Debug, Clone)]
 pub enum HopType {
     /// a bittering hop
     Bittering,
@@ -89,7 +89,7 @@ pub enum HopType {
 }
 
 /// the form of a hop
-#[derive(ToString, EnumString, Serialize, Deserialize, Debug)]
+#[derive(ToString, EnumString, Serialize, Deserialize, Debug, Clone)]
 pub enum HopForm {
     /// pellet hop
     Pellet,
